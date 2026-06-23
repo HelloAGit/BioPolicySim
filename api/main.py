@@ -40,3 +40,13 @@ def health():
 def simulate(req: PolicyRequest):
     result = ENGINE.run(req.policy_text)
     return result
+
+@app.get("/")
+def root():
+    return {
+        "message": "BioPolicySim API",
+        "endpoints": {
+            "simulate": "/simulate",
+            "streamlit": "/streamlit"
+        }
+    }
