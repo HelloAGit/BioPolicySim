@@ -1,0 +1,5 @@
+{
+  "name": "Hospital",
+  "interests": ["genomics"],
+  "concerns": ["model_eval"]
+}
