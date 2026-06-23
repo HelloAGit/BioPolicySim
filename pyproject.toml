@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biopolicysim"
+version = "0.0.0"
+description = "BioPolicySim"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
