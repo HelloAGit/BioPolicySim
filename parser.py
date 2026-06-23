@@ -15,3 +15,16 @@ class PolicyParser:
             if re.search(pattern, text, re.IGNORECASE):
                 tags.append(tag)
         return tags
+class PolicyParser:
+    """
+    Minimal parser to extract simple tags from text.
+    Extend this with your real parsing logic.
+    """
+    def parse(self, text):
+        text_l = (text or "").lower()
+        tags = set()
+        if "genomic" in text_l or "genomics" in text_l:
+            tags.add("genomics")
+        if "access control" in text_l or ("access" in text_l and "control" in text_l):
+            tags.add("access_control")
+        return list(tags)
